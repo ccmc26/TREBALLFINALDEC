@@ -9,4 +9,6 @@ router.get('/email/:email', userAPIController.getUsersByEmail);
 
 router.post('/', userAPIController.postUser);
 
+router.patch('/:username', userAPIController.updateUser);
+
 module.exports = router;

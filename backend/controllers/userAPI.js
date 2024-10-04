@@ -1,6 +1,7 @@
 const User = require('../models/user');
 // EL  CRUD
 
+//tots els users
 exports.getUsers = async (req, res) =>{
     try{
         const users = await User.find();
@@ -14,6 +15,7 @@ exports.getUsers = async (req, res) =>{
     }
 }   
 
+// pilla l'user pel surname
 exports.getUserBySurname = async (req, res) => {
     try{
         const user = await User.find({username: `${req.params.username}`})
@@ -27,6 +29,7 @@ exports.getUserBySurname = async (req, res) => {
     }
 }
 
+// pilla l'user per l'email
 exports.getUsersByEmail = async (req, res) => {
     try{
         const user = await User.find({email: `${req.params.email}`})
@@ -40,6 +43,7 @@ exports.getUsersByEmail = async (req, res) => {
     }
 }
 
+// crea un user
 exports.postUser = async(req, res) => {
     try{
         const { username, email, password, name, surnames} = req.body;
@@ -58,6 +62,7 @@ exports.postUser = async(req, res) => {
     }
 }
 
+// actualitza de forma parcial un user
 exports.updateUser = async(req, res) => {
     try{
         const usernameUser = req.params.username;
@@ -70,5 +75,15 @@ exports.updateUser = async(req, res) => {
         }
     }catch(error){
         res.send("ERROR " + error);
+    }
+}
+
+// elimina un User
+exports.deleteUser = async(req, res) => {
+    try{
+        const userDeleted = await User.findOneAndDelete({username: req.params.username})
+        res.json(userDeleted);
+    }catch(error){
+        res.send("ERROR: " + error);
     }
 }

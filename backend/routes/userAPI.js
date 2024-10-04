@@ -11,4 +11,6 @@ router.post('/', userAPIController.postUser);
 
 router.patch('/:username', userAPIController.updateUser);
 
+router.delete('/:username', userAPIController.deleteUser);
+
 module.exports = router;

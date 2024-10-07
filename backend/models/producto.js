@@ -15,8 +15,8 @@ let productoSchema = new mongoose.Schema({
     },
     _idTipo: [{
         _id:{
-            type:mongoose.Schema.ObjectId,
-            ref: 'tiposProducto'
+            type: Number,
+            ref: 'tipoProducto'
         }
     }]
 })

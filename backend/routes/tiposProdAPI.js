@@ -9,5 +9,7 @@ router.post('/', tipoProductoController.posTiposProduct);
 
 router.patch('/:_id', tipoProductoController.patchTiposProduct);
 
+router.delete('/:_id', tipoProductoController.deleteTiposProduct);
+
 
 module.exports = router;

@@ -41,3 +41,12 @@ exports.patchTiposProduct = async(req, res) => {
         res.send("ERROR: " + error)
     }
 }
+
+exports.deleteTiposProduct = async(req, res) => {
+    try{
+        let tipodeleted = await tipoProducto.findByIdAndDelete({_id: req.params._id});
+        res.send(tipodeleted);
+    }catch(error){
+        res.send("ERROR: " + error);
+    }
+}

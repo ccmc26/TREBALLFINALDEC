@@ -7,5 +7,7 @@ router.get('/', tipoProductoController.getTiposProduct);
 
 router.post('/', tipoProductoController.posTiposProduct);
 
+router.patch('/:_id', tipoProductoController.patchTiposProduct);
+
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const tipoProducto = require('../models/tipoProducto');
 
+// ensenya tots els tipos de productes
 exports.getTiposProduct = async(req, res) => {
     try{
         let tipos = await tipoProducto.find();
@@ -9,6 +10,7 @@ exports.getTiposProduct = async(req, res) => {
     }
 }
 
+// crea un nou registre en la informacio que li passem
 exports.posTiposProduct = async(req, res) => {
     try{
         const { name, desc} = req.body;
@@ -21,5 +23,21 @@ exports.posTiposProduct = async(req, res) => {
     res.json(newTipo);
     }catch(error){
         res.send("ERROR " + error);
+    }
+}
+
+// actualitza un nou registre
+exports.patchTiposProduct = async(req, res) => {
+    try{
+        const tipoID = req.params._id;
+        let existeTipo = await tipoProducto.findOne({_id: tipoID});
+        if(existeTipo){
+            let updateTipo = await tipoProducto.updateOne({_id: tipoID}, req.body);
+            res.json(await tipoProducto.find({_id: tipoID}));
+        }else{
+            res.send("No existeix cap tipus a actualitzar");
+        }
+    }catch(error){
+        res.send("ERROR: " + error)
     }
 }

@@ -48,13 +48,13 @@ exports.postUser = async(req, res) => {
     try{
         const { username, email, password, name, surnames} = req.body;
 
-        const newUser = {
+        const newUser = await User.create({
             username,
             email,
             password,
             name,
             surnames,
-        }
+        });
 
     res.json(newUser);
     }catch(error){

@@ -19,6 +19,11 @@ let productoSchema = new mongoose.Schema({
             ref: 'tipoProducto'
         
         // }
+    },
+    price: {
+        type: Number,
+        required: true,
+        min: 0
     }
 })
 

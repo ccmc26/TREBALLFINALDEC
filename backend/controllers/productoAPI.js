@@ -13,9 +13,11 @@ exports.getProductos = async(req, res) => {
 // listar por idTipo
 exports.getProductosByTipo = async(req, res) => {
     try{
-
+        const _idTipo = req.params._idTipo;
+        let productos = await Producto.find({_idTipo: _idTipo});
+        res.json(productos);
     }catch(error){
-
+        res.send("ERROR " + error);
     }
 }
 
@@ -34,5 +36,25 @@ exports.postProductos = async(req, res) => {
         res.json(newProducto)
     }catch(error){
         res.send("ERROR: " + error); 
+    }
+}
+
+// actualitzar un producto
+exports.updateProductos = async(req, res) => {
+    try{
+        const updateProducto = await Producto.findByIdAndUpdate({_id: req.params._id }, req.body);
+        res.json(updateProducto);
+    }catch(error){
+        res.send("ERROR: " + error);
+    }
+}
+
+// eliminar un producto
+exports.deleteProductos = async(req, res) => {
+    try{
+        const deleteProducto = await Producto.findByIdAndDelete({_id: req.params._id});
+        res.json(deleteProducto);
+    }catch(error){
+        res.send("ERROR " + error);
     }
 }

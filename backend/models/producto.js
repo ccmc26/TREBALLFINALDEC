@@ -13,13 +13,15 @@ let productoSchema = new mongoose.Schema({
         type: String,
         unique: true
     },
-    _idTipo: [{
-        _id:{
+    _idTipo: {
+        // _id:{
             type: Number,
             ref: 'tipoProducto'
-        }
-    }]
+        
+        // }
+    }
 })
+
 
 let producto = mongoose.model('producto', productoSchema);
 module.exports = producto;

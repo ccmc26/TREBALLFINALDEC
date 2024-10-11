@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* variables globales que nos permitiran eestandarizar el diseño */
+:root {
+    /*  */
+    --white-color: #fff;
+    --dark-color: #252525;
+    /* buscar paleta colores */
+    /* --primary-color: ;
+    --secondary-color: ; */
+    --ligth-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /* tamany de la font */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* amplaria de la font */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    --site-amx-width: 1300px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background: rgb(160, 71, 71);
+}

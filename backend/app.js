@@ -1,12 +1,15 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 
 const setupRoutes = require('./routes/routes.js');
 
 let app = express();
-const PORT = 8080;
+const PORT = process.env.PORT;
+const mongoURI = process.env.MONGO_URI;
 
-mongoose.connect('mongodb://127.0.0.1:27017/projecteFinal?authSource=admin')
+mongoose.connect(mongoURI)
 .then(() =>{
     console.log('Conectat a Mongoose');
 }).catch((error) =>{

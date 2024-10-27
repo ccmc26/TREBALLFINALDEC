@@ -28,19 +28,25 @@ que, amb l'ajuda d'eïnes d'aquest estil, es poden solucionar fàcilment.
 
 
 ## Instal·lació
-1. Primer has de clonar el repositori del projecte al teu dispositiu.
+1. **Primer has de clonar el repositori del projecte al teu dispositiu.**
 
 `git clone https://github.com/ccmc26/TREBALLFINALDEC`
-2. Una volta el repositori ja estiga clonat accedim al directori del projecte.
+
+2. **Una volta el repositori ja estiga clonat accedim al directori del projecte.**
 
 `cd TREBALLFINAL`
-3. Instal·lem totes les dependències necessàries
+
+3. **Instal·lem totes les dependències necessàries**
 
 `npm install`
-4. Creem un fitxer i configurem les variables d'entorn
+
+4. **Creem un fitxer i configurem les variables d'entorn.**
+
 Creem un fitxer .env a la carpeta arrel del projecte i definim les variables
 d'entorn necessaries.
-5. Executem la base de dades.
-6. Iniciem el servidor desde el repositori arrel.
+
+5. **Executem la base de dades.**
+
+6. **Iniciem el servidor desde el repositori arrel.**
 
 `node app.js`

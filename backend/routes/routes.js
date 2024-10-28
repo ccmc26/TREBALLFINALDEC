@@ -1,7 +1,7 @@
 // routes.js
-const usersAPIroutes = require('./API/userAPI.js');
-const tipoProductoAPIroutes = require('./API/tiposProdAPI.js');
-const productAPIroutes = require('./API/productAPI.js');
+const usersAPIroutes = require('./apiRoutes/userAPI.js');
+const tipoProductoAPIroutes = require('./apiRoutes/tiposProdAPI.js');
+const productAPIroutes = require('./apiRoutes/productAPI.js');
 
 const setupRoutes = (app) => {
     // Aquí configuras todas las rutas necesarias

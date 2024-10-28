@@ -10,8 +10,7 @@ en la gestió de les comandes.
 1. [DESCRIPCIÓ](#descripció)
 2. [MOTIVACIÓ](#motivació)
 2. [CARACTERÍSTIQUES](#característiques)
-3. [INSTAL·LACIÓ](#instal·lació) 
-<!-- el link de intal·lacio no redirigeix correctament -->
+3. [INSTAL·LACIÓ](#instal·lació) <!-- el link de intal·lacio no redirigeix correctament -->
 4. [FUNCIONAMENT](#funcionament)
 5. [ÚS](#us)
 6. [ESTRUCTURA DEL PROJECTE](#estructura-del-projecte)

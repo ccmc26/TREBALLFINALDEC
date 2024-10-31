@@ -1,0 +1,10 @@
+img.fotologo {
+    width: 100px; /* Ajusta el ancho a 100 píxeles */
+    height: auto; /* Mantiene la proporción */
+}
+
+p.baixfoto {
+    position: relative;
+    top: -20%;
+    left: 0%;
+}

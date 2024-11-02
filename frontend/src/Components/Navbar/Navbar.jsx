@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import './Navbar.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-import logo from '../Assets/logo.png'
-import cart_icon from '../Assets/carrito.png'
+import logo from '../Assets/logo.png';
+import cart_icon from '../Assets/carrito.png';
 
 export const Navbar = () => {
   const [menu,setMenu] = useState("inici");
@@ -16,7 +17,7 @@ export const Navbar = () => {
         {/* cada element del menu te un event que seteja el hookal valor indicat */}
         {/* si dona la casualitat que te el valor del hookmenu concideix en el elemnt */}
         {/* li afegim un element <hr/> que el que fa es crear una linia per a destacar */}
-        <li onClick={() => {setMenu("inici")}}>INICI {menu==="inici" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("inici")}}><Link to='/'>INICI</Link>{menu==="inici" ? <hr/> : <></>}</li>
         <li onClick={() => {setMenu("menu")}}>MENÚ {menu==="menu" ? <hr/> : <></>}</li>
         <li onClick={() => {setMenu("galeria")}}>GALERIA {menu==="galeria" ? <hr/> : <></>}</li>
         <li onClick={() => {setMenu("nosaltres")}}>NOSALTRES{menu==="nosaltres" ? <hr/> : <></>}</li>

@@ -12,11 +12,16 @@ export const Navbar = () => {
         <p className='baixfoto'>LA TRAVESSA</p>
       </div>
       <ul className="nav-menu">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>INICI <hr/></li>
+        <li>MENÚ</li>
+        <li>GALERIA</li>
+        <li>NOSALTRES</li>
       </ul>
+      <div className="nav-login-cart">
+        <button>Login</button>
+        <img className="fotocarro" src={cart_icon} alt=''/>
+        <div className="nav-cart-count">0</div>
+      </div>
     </div>
   )
 }

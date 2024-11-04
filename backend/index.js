@@ -2,6 +2,7 @@ require('dotenv').config({ path: './backend/.env' });
 
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const setupRoutes = require('./routes/routes.js');
 
@@ -18,6 +19,7 @@ mongoose.connect(mongoURI)
 
 // middleware per a que la app puga analitzar el body d'una sol·licitud
 app.use(express.json());
+app.use(cors());
 setupRoutes(app);
 
 app.listen(PORT, () => {

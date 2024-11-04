@@ -24,13 +24,14 @@ exports.getProductosByTipo = async(req, res) => {
 // crear un producto
 exports.postProductos = async(req, res) => {
     try{
-        const { name, desc, photo, _idTipo } = req.body;
+        const { name, desc, photo, _idTipo, price } = req.body;
 
         const newProducto = await Producto.create({
             name,
             desc,
             photo,
-            _idTipo
+            _idTipo,
+            price
         })
       
         res.json(newProducto)

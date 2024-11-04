@@ -27,6 +27,5 @@ let productoSchema = new mongoose.Schema({
     }
 })
 
-
 let producto = mongoose.model('producto', productoSchema);
 module.exports = producto;

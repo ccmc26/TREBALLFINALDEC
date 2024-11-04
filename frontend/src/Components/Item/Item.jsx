@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import './Item.css'
 
-const Item = (props) => {
+const Item = () => {
     const [productos, setProductos] = useState([]);
     useEffect(() => {
         // Hacemos la solicitud para obtener los datos desde el backend

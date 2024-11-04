@@ -1,4 +1,4 @@
-
+![](https://www.google.com/url?sa=i&url=https%3A%2F%2Felegantcode.com%2F2019%2F09%2F29%2Fcors-your-dev-environment-for-node-js-and-react-js%2F&psig=AOvVaw3Zs9Hg-8607yhx4fmjcOSH&ust=1730799672956000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjfrrKxwokDFQAAAAAdAAAAABAE)
 # TREBALL FINAL DAW 
 El projecte consisteix en un e-commerce d'un local de menjar per a 
 endur-se. L'objectiu de l'aplicació web es proporcionar una experiència de navegació 

@@ -17,14 +17,14 @@ export const Navbar = () => {
         {/* cada element del menu te un event que seteja el hookal valor indicat */}
         {/* si dona la casualitat que te el valor del hookmenu concideix en el elemnt */}
         {/* li afegim un element <hr/> que el que fa es crear una linia per a destacar */}
-        <li onClick={() => {setMenu("inici")}}><Link to='/'>INICI</Link>{menu==="inici" ? <hr/> : <></>}</li>
-        <li onClick={() => {setMenu("menu")}}>MENÚ {menu==="menu" ? <hr/> : <></>}</li>
-        <li onClick={() => {setMenu("galeria")}}>GALERIA {menu==="galeria" ? <hr/> : <></>}</li>
-        <li onClick={() => {setMenu("nosaltres")}}>NOSALTRES{menu==="nosaltres" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("inici")}}><Link style={{ textDecoration: 'none' }} to='/'>INICI</Link>{menu==="inici" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("menu")}}><Link style={{ textDecoration: 'none' }} to='/menu'>MENÚ</Link>{menu==="menu" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("galeria")}}><Link style={{ textDecoration: 'none' }} to='/'>GALERIA</Link>{menu==="galeria" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("nosaltres")}}><Link style={{ textDecoration: 'none' }} to='/'>NOSALTRES</Link>{menu==="nosaltres" ? <hr/> : <></>}</li>
       </ul>
       <div className="nav-login-cart">
-        <button>Login</button>
-        <img className="fotocarro" src={cart_icon} alt=''/>
+        <Link to='/login'><button>Login</button></Link>
+        <Link to='/cart'><img className="fotocarro" src={cart_icon} alt=''/></Link>
         <div className="nav-cart-count">0</div>
       </div>
     </div>

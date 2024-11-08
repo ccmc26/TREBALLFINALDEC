@@ -1,4 +1,3 @@
-
 .navbar{
     display: flex;
     justify-content: space-around;
@@ -15,12 +14,6 @@ img.fotocarro{
     width: 50px;
     height: auto;
 }
-
-/* .nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-} */
 
 p.baixfoto {
     position: relative;
@@ -92,3 +85,44 @@ p.baixfoto {
     background: red;
     color: white;
 }
+
+/* @media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    img.fotologo {
+        width: 80px; 
+    }
+
+    img.fotocarro {
+        width: 35px;
+    }
+
+    .nav-menu {
+        flex-direction: column; 
+        gap: 15px;
+        font-size: 16px; 
+    }
+
+    .nav-login-cart {
+        flex-direction:column; 
+        gap: 15px;
+    }
+
+    .nav-login-cart button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px; 
+    }
+
+    .nav-cart-count {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        margin-top: -30px;
+        margin-left: -40px;
+    }
+} */

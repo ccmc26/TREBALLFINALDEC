@@ -20,6 +20,7 @@ export const Navbar = () => {
         <li onClick={() => {setMenu("inici")}}><Link style={{ textDecoration: 'none' }} to='/'>INICI</Link>{menu==="inici" ? <hr/> : <></>}</li>
         <li onClick={() => {setMenu("menu")}}><Link style={{ textDecoration: 'none' }} to='/menu'>MENÚ</Link>{menu==="menu" ? <hr/> : <></>}</li>
         <li onClick={() => {setMenu("galeria")}}><Link style={{ textDecoration: 'none' }} to='/'>GALERIA</Link>{menu==="galeria" ? <hr/> : <></>}</li>
+        {/* canviar el nosaltres, sobra, vore que possar */}
         <li onClick={() => {setMenu("nosaltres")}}><Link style={{ textDecoration: 'none' }} to='/'>NOSALTRES</Link>{menu==="nosaltres" ? <hr/> : <></>}</li>
       </ul>
       <div className="nav-login-cart">

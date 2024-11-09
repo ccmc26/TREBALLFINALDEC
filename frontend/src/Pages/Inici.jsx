@@ -8,6 +8,7 @@ const Inici = () => {
     <div>
       <Hero/>
       {/* <Popular/> */}
+      inici
     </div>
   )
 }

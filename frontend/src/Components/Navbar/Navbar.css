@@ -1,3 +1,8 @@
+.link-style{
+    color: #171717;
+    text-decoration: none;
+}
+
 .navbar{
     display: flex;
     justify-content: space-around;

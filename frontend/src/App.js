@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 
 import { Navbar } from './Components/Navbar/Navbar';
@@ -7,12 +8,17 @@ import { Footer } from './Components/Footer/Footer';
 
 
 function App() {
+  const [menu,setMenu] = useState("inici");
+
+  const handleMenuSelect = (menuItem) => {
+    setMenu(menuItem);
+  };
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar menu={menu} setMenu={handleMenuSelect} />
         <AppRoutes />
-        <Footer />
+        <Footer setMenu={handleMenuSelect}/>
       </BrowserRouter>
     </div>
   );

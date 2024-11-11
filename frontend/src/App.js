@@ -9,10 +9,9 @@ import { Footer } from './Components/Footer/Footer';
 
 function App() {
   const [menu,setMenu] = useState("inici");
-
   const handleMenuSelect = (menuItem) => {
     setMenu(menuItem);
-  };
+  }; 
   return (
     <div>
       <BrowserRouter>

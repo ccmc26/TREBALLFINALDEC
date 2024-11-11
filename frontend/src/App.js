@@ -13,10 +13,12 @@ function App() {
     setMenu(menuItem);
   }; 
   return (
-    <div>
+    <div className='App'>
       <BrowserRouter>
         <Navbar menu={menu} setMenu={handleMenuSelect} />
-        <AppRoutes />
+          <div className="content">
+            <AppRoutes />
+          </div>
         <Footer setMenu={handleMenuSelect}/>
       </BrowserRouter>
     </div>

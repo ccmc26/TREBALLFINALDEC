@@ -30,7 +30,7 @@
 
 .loginsignup-fields input{
     height: 52px;
-    width: 100%;
+    width: 97%;
     padding-left: 20px;
     border: 1px solid #c9c9c9;
     outline: none;
@@ -39,7 +39,7 @@
 }
 
 .loginsignup-container button{
-    width: 104%;
+    width: 101%;
     height: 52px;
     color: white;
     background: #171717;

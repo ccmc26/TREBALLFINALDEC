@@ -3,7 +3,9 @@ const Producto = require('../models/producto.js');
 // listar todos los productos
 exports.getProductos = async(req, res) => {
     try{
-        let productos = await Producto.find();
+        let productos = await Producto
+                                .find()
+                                .populate('tipoProductoInfo');
         res.json(productos);
     }catch(error){
         res.send("ERROR: " + error);
@@ -14,22 +16,43 @@ exports.getProductos = async(req, res) => {
 exports.getProductosByTipo = async(req, res) => {
     try{
         const _idTipo = req.params._idTipo;
-        let productos = await Producto.find({_idTipo: _idTipo});
+        let productos = await Producto
+                                .find({_idTipo: _idTipo})
+                                .populate('tipoProductoInfo');
         res.json(productos);
     }catch(error){
         res.send("ERROR " + error);
     }
 }
 
+// obtindre un producte pel seu id
+exports.getProductoById = async (req, res) => {
+    try {
+        const id  = req.params._id;
+  
+      // Busca el producte per ID
+      const producto = await Producto
+                                .findById(id)
+                                .populate('tipoProductoInfo');
+  
+      if (!producto) {
+        return res.json({ message: 'Producte no trobat' });
+      }
+  
+      res.json(producto);
+    } catch (error) {
+        res.send("ERROR " + error);
+    }
+  };
+
 // crear un producto
 exports.postProductos = async(req, res) => {
     try{
-        const { name, desc, photo, _idTipo, price } = req.body;
+        const { name, desc, _idTipo, price } = req.body;
 
         const newProducto = await Producto.create({
             name,
             desc,
-            photo,
             _idTipo,
             price
         })

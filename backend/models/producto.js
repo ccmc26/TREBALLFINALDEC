@@ -9,16 +9,9 @@ let productoSchema = new mongoose.Schema({
         type: String,
         maxlength: 400
     },
-    photo:{
-        type: String,
-        unique: true
-    },
     _idTipo: {
-        // _id:{
-            type: Number,
-            ref: 'tipoProducto'
-        
-        // }
+        type: mongoose.Types.ObjectId,
+        ref: 'tiposProducto'
     },
     price: {
         type: Number,
@@ -27,5 +20,12 @@ let productoSchema = new mongoose.Schema({
     }
 })
 
-let producto = mongoose.model('producto', productoSchema);
+productoSchema.virtual('tipoProductoInfo',{
+    ref: 'tiposProducto',
+    localField: '_idTipo',
+    foreignField: '_id',
+    justOne: true,
+});
+
+const producto = mongoose.model('producto', productoSchema);
 module.exports = producto;

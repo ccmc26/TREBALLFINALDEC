@@ -1,16 +1,20 @@
 .loginsignup{
-    height: 80vh;
-    background: hsl(32, 100%, 75%);
+    height: 70vh;
+    background-image: url('../../Components/Assets/istockphoto-1457979959-612x612.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     padding-top: 100px;
     width: 100%;
 }
 
 .loginsignup-container{
     width: 580px;
-    height: 600px;
+    height: 400px;
     background: white;
     margin: auto;
     padding: 40px 60px;
+    border-radius: 10%;
 }
 
 .loginsignup-container h1{
@@ -35,7 +39,7 @@
 }
 
 .loginsignup-container button{
-    width: 580px;
+    width: 104%;
     height: 52px;
     color: white;
     background: #171717;
@@ -45,3 +49,19 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.loginsignup-login {
+    margin-top: -12px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.loginsignup-login .link-text{
+    color: #0069F0;
+    font-weight: 600;
+}
+
+/* .link-text{
+    text-decoration: none;
+} */

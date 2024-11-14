@@ -10,6 +10,17 @@ exports.getTiposProduct = async(req, res) => {
     }
 }
 
+exports.getTipoProduct = async(req, res) => {
+    try{
+        const id = req.params._id;
+
+        const tipoP = await tipoProducto.findById(id);
+        res.json(tipoP);
+    }catch(error){
+        res.send("ERROR: " + error);
+    }
+}
+
 // crea un nou registre en la informacio que li passem
 exports.posTiposProduct = async(req, res) => {
     try{

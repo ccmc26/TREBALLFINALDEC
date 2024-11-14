@@ -13,12 +13,15 @@ const Item = () => {
     }, []);
   return (
     <div className='item'>
-        <h2> Llista productes </h2>
-        <ul>
-            {productos.map((producto) => (
-                <li key={producto.id}>{producto.name} - ${producto.price}</li>
-            ))}
-        </ul>
+        <h2 className='titol'> Llista productes </h2>
+        <div className="product-list">
+          {productos.map((producto) => (
+            <div className="product">
+              <h2 key={producto.id}>{producto.name}</h2>
+              <p>{producto.desc} - {producto.price}€</p>
+            </div>
+          ))}
+        </div>
     </div>
   )
 }

@@ -8,8 +8,6 @@ const setupRoutes = (app) => {
     app.use('/api/users', usersAPIroutes);
     app.use('/api/tipos', tipoProductoAPIroutes);
     app.use('/api/productos', productAPIroutes);
-    // app.use('/users');
-    // app.use('/productos');
 };
 
 module.exports = setupRoutes;

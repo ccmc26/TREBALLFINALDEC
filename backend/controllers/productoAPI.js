@@ -29,21 +29,16 @@ exports.getProductosByTipo = async(req, res) => {
 exports.getProductoById = async (req, res) => {
     try {
         const id  = req.params._id;
-  
+        console.log("ID:" + id);
       // Busca el producte per ID
-      const producto = await Producto
+        let producto = await Producto
                                 .findById(id)
                                 .populate('tipoProductoInfo');
-  
-      if (!producto) {
-        return res.json({ message: 'Producte no trobat' });
-      }
-  
-      res.json(producto);
+        res.json(producto);
     } catch (error) {
         res.send("ERROR " + error);
     }
-  };
+};
 
 // crear un producto
 exports.postProductos = async(req, res) => {

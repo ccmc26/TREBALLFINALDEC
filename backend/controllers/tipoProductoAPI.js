@@ -19,7 +19,7 @@ exports.posTiposProduct = async(req, res) => {
             name,
             desc
         });
-
+        await newTipo.save();
     res.json(newTipo);
     }catch(error){
         res.send("ERROR " + error);

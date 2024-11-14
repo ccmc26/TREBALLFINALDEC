@@ -4,8 +4,9 @@ const productoController = require('../../controllers/productoAPI.js');
 let router = express.Router();
 
 router.get('/', productoController.getProductos);
-router.get('/tipo/:_idTipo', productoController.getProductosByTipo);
 router.get('/:_id', productoController.getProductoById);
+router.get('/tipo/:_idTipo', productoController.getProductosByTipo);
+
 
 router.post('/', productoController.postProductos);
 

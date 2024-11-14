@@ -53,6 +53,7 @@ exports.postProductos = async(req, res) => {
         })
       
         res.json(newProducto)
+        await productos.save();
     }catch(error){
         res.send("ERROR: " + error); 
     }

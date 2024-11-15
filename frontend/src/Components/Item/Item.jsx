@@ -13,7 +13,7 @@ const Item = () => {
     }, []);
   return (
     <div className='item'>
-        <h2 className='titol'> Llista productes </h2>
+        <h2 className='titol'> LLISTA PLATS </h2>
         <div className="product-list">
           {productos.map((producto) => (
             <div className="product">

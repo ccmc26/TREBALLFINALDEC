@@ -26,11 +26,17 @@ exports.posTiposProduct = async(req, res) => {
     try{
         const { name, desc} = req.body;
 
+        // xicoteta comprobació
+        if (!name || !desc) { 
+            res.status(400).send('Faltenn camps requerits'); 
+            return; 
+        }
+
         const newTipo = await tipoProducto.create({
             name,
             desc
         });
-        await newTipo.save();
+        // await newTipo.save(); estaria fent la peticio dos voltes a la vegada i la maquina peta, obviament
     res.json(newTipo);
     }catch(error){
         res.send("ERROR " + error);

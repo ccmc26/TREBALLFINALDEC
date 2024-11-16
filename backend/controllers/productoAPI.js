@@ -28,7 +28,7 @@ exports.getProductosByTipo = async(req, res) => {
 // obtindre un producte pel seu id
 exports.getProductoById = async (req, res) => {
     try {
-        const id  = req.params._id;
+        const id  = res.params._id;
         console.log("ID:" + id);
       // Busca el producte per ID
         let producto = await Producto
@@ -40,10 +40,28 @@ exports.getProductoById = async (req, res) => {
     }
 };
 
+// obtindre un producte pel seu nom
+// working on it
+exports.getProductoByName = async (req, res) => {
+    try{
+        const name = req.query.name;
+        let producto = await Producto.find({name: name});
+        res.json(producto);
+    }catch(error){
+        res.send('ERROR: ' + error);
+    }
+};
+
 // crear un producto
 exports.postProductos = async(req, res) => {
     try{
         const { name, desc, _idTipo, price } = req.body;
+
+        // xicoteta comprobació abans d'aguardar la info
+        if (!name || !price || !desc) { 
+            res.status(400).send('Falten campss requerits'); 
+            return; 
+        }
 
         const newProducto = await Producto.create({
             name,
@@ -53,7 +71,7 @@ exports.postProductos = async(req, res) => {
         })
       
         res.json(newProducto)
-        await productos.save();
+        // await productos.save(); dona problemes perque claro faig la peticio dos vegades
     }catch(error){
         res.send("ERROR: " + error); 
     }

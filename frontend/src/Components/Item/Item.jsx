@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import './Item.css'
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 const Item = () => {
     const [productos, setProductos] = useState([]);
@@ -19,6 +20,9 @@ const Item = () => {
             <div className="product">
               <h2 key={producto.id}>{producto.name}</h2>
               <p>{producto.desc} - {producto.price}€</p>
+              <button className='icon-button'>
+                <IoMdAddCircleOutline className='icon-photo'/>
+              </button>
             </div>
           ))}
         </div>

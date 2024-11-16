@@ -32,4 +32,26 @@
 
 .product p { 
     text-align: left; 
+    padding-top: 5px;
+}
+
+.icon-button { 
+    background-color: white; 
+    border: none; 
+    color: #171717; 
+    padding: 10px 20px; 
+    font-size: 24px; /* Tamaño del botón */ 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: auto;
+    
+}
+
+.icon-photo{
+    width: 25px;
+    height: 25px;
+    margin-top: -50px;
 }

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mi-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node index.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://carconmar:carconmar26%40@projectefinal.cogmp.mongodb.net/projecteFINAL?retryWrites=true&w=majority
+
+  # - type: web
+  #   name: mi-frontend
+  #   env: node
+  #   buildCommand: cd frontend && npm install && npm run build
+  #   startCommand: cd frontend && npm start
+  #   envVars:
+  #     - key: REACT_APP_API_URL
+  #       value: http://<url-de-tu-backend>

@@ -2,7 +2,7 @@ backend/node_modules/
 backend/.env
 backend/.env2
 
-render.yaml
+# render.yaml
 
 frontend/node_modules/
 frontend/.env

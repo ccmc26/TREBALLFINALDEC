@@ -1,5 +1,11 @@
 // require('dotenv').config({ path: './backend/.env' });
-const path = require('path'); // Cargar el archivo .env dependiendo del entorno 
+const path = require('path'); 
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const setupRoutes = require('./routes/routes.js');
+
 if (process.env.NODE_ENV !== 'production') { 
     // Ruta para entorno de desarrollo local 
     console.log('vaaaaaaaa');
@@ -9,12 +15,6 @@ if (process.env.NODE_ENV !== 'production') {
     // Para producción, las variables de entorno deberían estar configuradas en Railway 
     require('dotenv').config();
  }
-
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
-const setupRoutes = require('./routes/routes.js');
 
 let app = express();
 const PORT = process.env.PORT || 8080;

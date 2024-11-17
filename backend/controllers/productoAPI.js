@@ -71,7 +71,7 @@ exports.postProductos = async(req, res) => {
         })
       
         res.json(newProducto)
-        // await productos.save(); dona problemes perque claro faig la peticio dos vegades
+        // dona problemes perque claro faig la peticio dos vegades el .save()
     }catch(error){
         res.send("ERROR: " + error); 
     }

@@ -14,11 +14,15 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('ufffffffff');
     // Para producción, las variables de entorno deberían estar configuradas en Railway 
     require('dotenv').config();
+    console.log('MONGO_URI:', process.env.MONGO_URI); 
+    console.log('NODE_ENV:', process.env.NODE_ENV);
  }
 
 let app = express();
 const PORT = process.env.PORT || 8080;
 const mongoURI = process.env.MONGO_URI;
+
+
 
 mongoose.connect(mongoURI)
 .then(() =>{

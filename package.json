@@ -4,7 +4,9 @@
   "description": "",
   "main": "backend/index.js",
   "scripts": {
-    "start": "NODE_ENV=development node backend/index.js",
+    "start": "node backend/index.js", 
+    "start:backend": "cd backend && npm start", 
+    "start:frontend": "cd frontend && npm start", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carmen",

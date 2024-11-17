@@ -1,4 +1,14 @@
-require('dotenv').config({ path: './backend/.env' });
+// require('dotenv').config({ path: './backend/.env' });
+const path = require('path'); // Cargar el archivo .env dependiendo del entorno 
+if (process.env.NODE_ENV !== 'production') { 
+    // Ruta para entorno de desarrollo local 
+    console.log('vaaaaaaaa');
+    require('dotenv').config({ path: './backend/.env' });
+ } else { 
+    console.log('ufffffffff');
+    // Para producción, las variables de entorno deberían estar configuradas en Railway 
+    require('dotenv').config();
+ }
 
 const express = require('express');
 const mongoose = require('mongoose');

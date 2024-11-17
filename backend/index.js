@@ -1,10 +1,5 @@
 // require('dotenv').config({ path: './backend/.env' });
 const path = require('path'); 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
-const setupRoutes = require('./routes/routes.js');
 
 if (process.env.NODE_ENV !== 'production') { 
     // Ruta para entorno de desarrollo local 
@@ -17,6 +12,12 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('MONGO_URI:', process.env.MONGO_URI); 
     console.log('NODE_ENV:', process.env.NODE_ENV);
  }
+
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const setupRoutes = require('./routes/routes.js');
 
 let app = express();
 const PORT = process.env.PORT || 8080;

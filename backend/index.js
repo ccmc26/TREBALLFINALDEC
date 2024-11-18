@@ -9,8 +9,8 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('ufffffffff');
     // Para producción, las variables de entorno deberían estar configuradas en Railway 
     require('dotenv').config();
-    console.log('MONGO_URI:', process.env.MONGO_URI); 
-    console.log('NODE_ENV:', process.env.NODE_ENV);
+    // console.log('MONGO_URI:', process.env.MONGO_URI); 
+    // console.log('NODE_ENV:', process.env.NODE_ENV);
  }
 
 const express = require('express');

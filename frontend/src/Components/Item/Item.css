@@ -10,8 +10,9 @@
 }
 
 .product {
-    background-color: #fff;
+    background-color: #ffa000;
     border: 1px solid #ddd;
+    border-radius: 12px;
     padding: 20px;
     margin-right: 20px;
     margin-bottom: 10px; 
@@ -36,7 +37,7 @@
 }
 
 .icon-button { 
-    background-color: white; 
+    background-color: #ffa000; 
     border: none; 
     color: #171717; 
     padding: 10px 20px; 

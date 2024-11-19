@@ -62,11 +62,12 @@ userSchema.pre('save', async function(next){
 });
 
 // metodo que compara les contrasenyes en text pla
-userSchema.methods.comparePassword = function(candidatePassword, cb){
-    bcrypt.compare(candidatePassword, this.password, function(error, isMatch){
-        if(error) return cb(error);
-        cb(null, isMatch);
-    });
+userSchema.methods.comparePassword = async function(candidatePassword){
+    try {
+        return await bcrypt.compare(candidatePassword, this.password);
+    } catch (error) {
+        throw new Error('Error al comparar la contraseña: ' + error.message);
+    }
 };
 
 let User = mongoose.model('users', userSchema);

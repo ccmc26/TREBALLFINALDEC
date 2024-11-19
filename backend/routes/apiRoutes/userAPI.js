@@ -8,6 +8,7 @@ router.get('/:username', userAPIController.getUserBySurname);
 router.get('/email/:email', userAPIController.getUsersByEmail);
 
 router.post('/', userAPIController.postUser);
+router.post('/login', userAPIController.postLoginUser);
 
 router.patch('/:username', userAPIController.updateUser);
 

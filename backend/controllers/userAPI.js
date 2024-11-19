@@ -69,13 +69,13 @@ exports.postLoginUser = async(req, res) => {
         // busquem si existeix algun usuari amb eixe email
         let user = await User.findOne({ email: email});
         // si no existeix indiquem que no ho fa
-        if(!user) res.send("Correu o contrasenya incorrectes");
+        if(!user) res.json({message: "Correu o contrasenya incorrectes"});
         // si si que existeix comprovem si es un Match
         const isMatch = await user.comparePassword(password);
         // si es un match s'indica
         // no es un match es mostra el mateix missatge que en el del email
-        if(isMatch) res.send("Inici de sessió exitos");
-        else res.send("Correu o contrasenya incorrectes");
+        if(isMatch) res.json({message: "Inici de sessió correcte "});
+        else res.json({message: "Correu o contrasenya incorrectes"});
     }catch(error){
         res.send("ERROR: " + error);
     }

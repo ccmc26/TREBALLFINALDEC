@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const tipoProducto = require('./tipoProducto');
 
 let productoSchema = new mongoose.Schema({
     name:{
@@ -20,11 +21,17 @@ let productoSchema = new mongoose.Schema({
     }
 })
 
-productoSchema.virtual('tipoProductoInfo',{
-    ref: 'tiposProducto',
-    localField: '_idTipo',
-    foreignField: '_id',
-    justOne: true,
+// fem una xicoteta comprobació per a vore que si que existeix el idTipo
+productoSchema.pre('save', async function (next) {
+    try { 
+        const tipoproducto = await tipoProducto.findById(this._idTipo); 
+        if (!tipoProducto) { 
+            throw new Error('Invalid productoId'); 
+        } 
+        next(); 
+    } catch (error) { 
+        next(error);
+    }
 });
 
 const producto = mongoose.model('producto', productoSchema);

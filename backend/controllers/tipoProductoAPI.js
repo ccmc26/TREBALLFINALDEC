@@ -50,7 +50,6 @@ exports.patchTiposProduct = async(req, res) => {
         let existeTipo = await tipoProducto.findOne({_id: tipoID});
         if(existeTipo){
             let updateTipo = await tipoProducto.updateOne({_id: tipoID}, req.body);
-            // await tipoProducto.find({_id: tipoID})
             res.json({updateTipo});
         }else{
             res.send("No existeix cap tipus a actualitzar");

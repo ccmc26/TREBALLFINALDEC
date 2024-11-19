@@ -4,8 +4,8 @@ const Producto = require('../models/producto.js');
 exports.getProductos = async(req, res) => {
     try{
         let productos = await Producto
-                                .find()
-                                .populate('tipoProductoInfo');
+                                .find();
+                                // .populate('tipoProductoInfo');
         res.json(productos);
     }catch(error){
         res.send("ERROR: " + error);
@@ -17,8 +17,8 @@ exports.getProductosByTipo = async(req, res) => {
     try{
         const _idTipo = req.params._idTipo;
         let productos = await Producto
-                                .find({_idTipo: _idTipo})
-                                .populate('tipoProductoInfo');
+                                .find({_idTipo: _idTipo});
+                                // .populate('tipoProductoInfo');
         res.json(productos);
     }catch(error){
         res.send("ERROR " + error);
@@ -30,8 +30,8 @@ exports.getProductoById = async (req, res) => {
     try {
       // Busca el producte per ID
         let producto = await Producto
-                                .findById(req.params._id)
-                                .populate('tipoProductoInfo');
+                                .findById(req.params._id);
+                                // .populate('tipoProductoInfo');
         res.json(producto);
     } catch (error) {
         res.send("ERROR " + error);

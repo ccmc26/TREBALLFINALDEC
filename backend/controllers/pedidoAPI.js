@@ -32,5 +32,22 @@ exports.postPedido = async(req, res) => {
 }
 
 // actualitzar pedido
+exports.updatePedido = async(req, res) =>{
+    try{
+        const updatePredido = await Pedido.findByIdAndUpdate({_id: req.params._id }, req.body);
+        res.json(this.updatePredido);
+    }catch(error){
+        res.send("ERROR: " + error);
+    }
+}
 
+// eliminar pedido
+exports.deletePedido = async(req, res) => {
+    try{
+        const deletePedido = await Pedido.findByIdAndDelete({_id: req.params._id});
+        res.json(deletePedido);
+    }catch(error){
+        res.send("ERROR: " + error);
+    }
+}
 

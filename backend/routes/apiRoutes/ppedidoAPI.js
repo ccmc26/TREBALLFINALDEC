@@ -6,3 +6,7 @@ let router = express.Router();
 router.get('/', pedidoController.getPedidos);
 
 router.post('/', pedidoController.postPedido);
+
+router.patch('/:_id', pedidoController.updatePedido);
+
+router.delete('/:id', pedidoController.deletePedido);

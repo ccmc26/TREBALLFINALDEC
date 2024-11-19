@@ -27,8 +27,7 @@ let pedidoSchema = new mongoose.Schema({
         }
     ]
     
-},
-);
+},);
 
 pedidoSchema.plugin(AutoIncrement, { inc_field: 'numeroPedido' });
 

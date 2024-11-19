@@ -1,7 +1,7 @@
 // PER ACABAR, MIRAR COM REALITZAR-HO
 const mongoose = require('mongoose');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
-const User = require('./User');
+const User = require('./user');
 const Producto = require('./producto');
 
 let pedidoSchema = new mongoose.Schema({

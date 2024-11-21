@@ -2,8 +2,8 @@ services:
   - type: web
     name: mi-backend
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: npm run start:backend
+    buildCommand: "cd backend && npm install"
+    startCommand: "npm run start:backend"
     envVars:
       - key: MONGO_URI
         value: mongodb+srv://carconmar:carconmar26%40@projectefinal.cogmp.mongodb.net/projecteFINAL?retryWrites=true&w=majority

@@ -12,7 +12,7 @@ import Register from '../Pages/Register'
 export const AppRoutes = () => {
   return (
     <Routes>
-        <Route path='/' element={<Inici/>}/>
+        <Route path='/' element={<Inici/>} />
         <Route path='/menu' element={<Menu/>}/>
         {/* <Route path='/product' element={<Product/>}> */}
              {/* <Route path=':productId' element={<Item/>}/>

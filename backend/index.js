@@ -12,7 +12,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -20,8 +19,8 @@ const setupRoutes = require('./routes/routes.js');
 
 let app = express();
 const PORT = process.env.PORT || 8080;
-// const mongoURI = process.env.MONGO_URI;
-const mongoURI = "mongodb+srv://carconmar:carconmar26%40@projectefinal.cogmp.mongodb.net/projecteFINAL?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGO_URI;
+// const mongoURI = "mongodb+srv://carconmar:carconmar26%40@projectefinal.cogmp.mongodb.net/projecteFINAL?retryWrites=true&w=majority";
 
 mongoose.connect(mongoURI)
 .then(() =>{

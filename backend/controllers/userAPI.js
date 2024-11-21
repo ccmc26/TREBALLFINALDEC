@@ -63,19 +63,21 @@ exports.postUser = async(req, res) => {
 }
 
 // gestiona un inici de sessió
+// cal especificar l'estat HTTP perquè sino s'estableix automaticament en
+// 200
 exports.postLoginUser = async(req, res) => {
     try{
         const { email, password } = req.body;
         // busquem si existeix algun usuari amb eixe email
         let user = await User.findOne({ email: email});
         // si no existeix indiquem que no ho fa
-        if(!user) return res.json({message: "Correu o contrasenya incorrectes"});
+        if(!user) return res.status(401).json({message: "Correu o contrasenya incorrectes"});
         // si si que existeix comprovem si es un Match
         const isMatch = await user.comparePassword(password);
         // si es un match s'indica
         // no es un match es mostra el mateix missatge que en el del email
-        if(isMatch) return res.json({message: "Inici de sessió correcte "});
-        else return res.json({message: "Correu o contrasenya incorrectes"});
+        if(isMatch) return res.status(200).json({message: "Inici de sessió correcte "});
+        else return res.status(401).json({message: "Correu o contrasenya incorrectes"});
     }catch(error){
         res.send("ERROR: " + error);
     }

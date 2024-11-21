@@ -23,6 +23,7 @@ export const Navbar = ({ menu, setMenu}) => {
         <li onClick={() => setMenu("nosaltres")}><Link className="link-style" to='/'>NOSALTRES</Link>{menu==="nosaltres" ? <hr/> : <></>}</li>
       </ul>
       <div className="nav-login-cart">
+        {/* mirar com fer si un usuari esta ja loggejat aparega logout */}
         <Link to='/login'><button onClick={() => setMenu("login")}>LOGIN</button></Link>
         <Link to='/cart'><img onClick={() => setMenu("cart")} className="fotocarro" src={cart_icon} alt=''/></Link>
         <div className="nav-cart-count">0</div>

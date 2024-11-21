@@ -37,6 +37,7 @@ const LoginSignUp = () => {
       if (response.ok) {
         // Si el login es exitoso
         console.log('Usuario autenticado:', data); // Aquí puedes manejar los datos del usuario
+        // setMenu("menu");
         navigate('/menu'); // Redirige a '/menu'
       } else {
         // Si hay un error (credenciales incorrectas)

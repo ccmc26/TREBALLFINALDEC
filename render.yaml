@@ -4,6 +4,7 @@ services:
     env: node
     buildCommand: "cd backend && npm install"
     startCommand: "cd backend && npm run start"
+    workingDirectory: ./backend
     envVars:
       - key: MONGO_URI
         value: mongodb+srv://carconmar:carconmar26%40@projectefinal.cogmp.mongodb.net/projecteFINAL?retryWrites=true&w=majority

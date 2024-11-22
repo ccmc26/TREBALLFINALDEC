@@ -9,7 +9,6 @@ import { Footer } from './Components/Footer/Footer';
 
 function App() {
   const [menu,setMenu] = useState("inici");
-  const [user, setUser] = useState("");
   const handleMenuSelect = (menuItem) => {
     setMenu(menuItem);
   }; 
